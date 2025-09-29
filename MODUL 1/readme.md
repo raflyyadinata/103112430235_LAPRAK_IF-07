@@ -49,7 +49,7 @@ int main() {
 
 > Output
 > 
-> ![Screenshot Output Guided 1](output/ss_guided_1.jpg)
+> ![Screenshot Output Guided 1](output/guided1.jpg)
 
 
 
@@ -110,7 +110,7 @@ int main()
 
 > Output
 > 
-> ![Screenshot Output Guided 2](output/ss_guided_2.jpg)
+> ![Screenshot Output Guided 2](output/guided2.jpg)
 
 
 
@@ -179,7 +179,7 @@ int main()
 
 > Output
 > 
-> ![Screenshot Output Guided 3](output/ss_guided_3.jpg)
+> ![Screenshot Output Guided 3](output/guided3.jpg)
 
 
 
@@ -222,7 +222,7 @@ int main()
 
 > Output
 > 
-> ![Screenshot Output Guided 4](output/ss_guided_4.jpg)
+> ![Screenshot Output Guided 4](output/guided4.jpg)
 
 
 ---
@@ -284,7 +284,7 @@ int main()
 
 > Output
 > 
-> ![Screenshot Output Guided 5](output/ss_guided_5.jpg)
+> ![Screenshot Output Guided 5](output/guided5.jpg)
 
 
 ---
@@ -310,7 +310,7 @@ int main()
 
 > Output
 > 
-> ![Screenshot Output Guided 6](output/ss_guided_6.jpg)
+> ![Screenshot Output Guided 6](output/guided6.jpg)
 
 
 
