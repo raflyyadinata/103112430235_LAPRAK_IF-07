@@ -48,7 +48,7 @@ int main() {
 ```
 
 > Output
-> 
+> membuat tipe data Mahasiswa yang memiliki atribut nama, nim, dan ipk. Program meminta input dari pengguna, menyimpan data ke dalam struct, dan menampilkannya kembali ke layar.
 > ![Screenshot Output Guided 1](output/guided1.png)
 
 
@@ -75,7 +75,7 @@ int main()
 ```
 
 > Output
-> 
+> operasi aritmatika dengan variabel bertipe int dan float. Nilai X, Y, dan W dijumlahkan/dibagi, lalu hasilnya (float) ditampilkan ke layar.
 > ![Screenshot Output Guided 2](output/guidedd2.png)
 
 
@@ -144,7 +144,8 @@ int main()
 ```
 
 > Output
-> 
+> if dan else untuk menghitung diskon berdasarkan total pembelian.
+> switch untuk menentukan apakah hari tertentu adalah hari kerja atau hari libur berdasarkan kode angka.
 > ![Screenshot Output Guided 3](output/guided3.png)
 
 
@@ -187,7 +188,8 @@ int main()
 ```
 
 > Output
-> 
+> for loop yang mencetak teks sesuai jumlah yang dimasukkan.
+> do-while loop yang mencetak teks "bahlil ke-" sebanyak input yang diberikan pengguna.
 > ![Screenshot Output Guided 4](output/guided4.png)
 
 
@@ -249,7 +251,10 @@ int main()
 ```
 
 > Output
-> 
+> Fungsi untuk menghitung luas dan keliling persegi panjang.
+
+> Prosedur (fungsi void) untuk menampilkan hasil perhitungan.
+> Input berupa panjang dan lebar, hasilnya ditampilkan dua kali: dengan fungsi dan prosedur.
 > ![Screenshot Output Guided 5](output/guided5.png)
 
 
@@ -275,7 +280,7 @@ int main()
 ```
 
 > Output
-> 
+> meminta input satu karakter dari pengguna menggunakan getchar() dan kemudian menampilkannya kembali. Berfungsi untuk demonstrasi input karakter tunggal.
 > ![Screenshot Output Guided 6](output/guided6.png)
 
 
