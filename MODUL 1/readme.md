@@ -339,7 +339,7 @@ int main() {
 ```
 
 > Output
-> 
+> menerima dua input bilangan bertipe float  . kemudian menghitung hasil dari operasi penjumlahan, pengurangan, perkalian, dan pembagian. Setiap operasi dipisahkan dalam fungsi tersendiri agar kode lebih terstruktur dan mudah dibaca. Input dibaca menggunakan cin, dan hasil ditampilkan dengan cout.
 > ![Screenshot Output Unguided 1](output/unguided1.png)
 
 
@@ -392,7 +392,7 @@ int main() {
 ```
 
 > Output
-> 
+> mengubah input berupa angka bulat dari 0 hingga 100 menjadi bentuk tulisan dalam Bahasa Indonesia. Program menggunakan array untuk menyimpan nama-nama angka satuan dan puluhan, serta menggunakan logika percabangan if-else untuk menangani kondisi khusus seperti angka 11, belasan, dan 100. Operator pembagian (/) dan modulo (%) digunakan untuk memisahkan digit puluhan dan satuan.
 > ![Screenshot Output Unguided 2](output/unguided2.png)
 
 
@@ -457,9 +457,14 @@ int main() {
 ```
 
 > Output
-> 
+> mencetak pola berbentuk segitiga terbalik yang terdiri dari angka menurun di sebelah kiri, simbol * di tengah, dan angka menaik di sebelah kanan. Pola ini dibentuk menggunakan perulangan for bersarang, dengan tinggi pola ditentukan berdasarkan input dari pengguna. Baris terakhir hanya menampilkan satu simbol * di tengah.
 > ![Screenshot Output Unguided 3](output/unguided3.png)
 
 
 
 ## Referensi
+
+https://www.duniailkom.com/tutorial-belajar-c-plus-plus-cara-membuat-fungsi-bahasa-c-plus-plus/#google_vignette (diakses 27 September 2025)
+https://www.youtube.com/watch?v=hVzmJwyMH2Q&t=10s (diakses 29 September 2025)
+https://www.belajarcpp.com/tutorial/cpp/struct/ (diakses 29 September 2025)
+https://www.duniailkom.com/tutorial-belajar-c-plus-plus-perulangan-while-bahasa-c-plus-plus/ (diakses 30 September 2025)
