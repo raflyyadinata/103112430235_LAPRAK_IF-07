@@ -49,7 +49,7 @@ int main() {
 
 > Output
 > 
-> ![Screenshot Output Guided 1](output/guided1.jpg)
+> ![Screenshot Output Guided 1](output/guided1.png)
 
 
 
@@ -110,7 +110,7 @@ int main()
 
 > Output
 > 
-> ![Screenshot Output Guided 2](output/guided2.jpg)
+> ![Screenshot Output Guided 2](output/guided2.png)
 
 
 
@@ -179,7 +179,7 @@ int main()
 
 > Output
 > 
-> ![Screenshot Output Guided 3](output/guided3.jpg)
+> ![Screenshot Output Guided 3](output/guided3.png)
 
 
 
@@ -222,7 +222,7 @@ int main()
 
 > Output
 > 
-> ![Screenshot Output Guided 4](output/guided4.jpg)
+> ![Screenshot Output Guided 4](output/guided4.png)
 
 
 ---
@@ -284,7 +284,7 @@ int main()
 
 > Output
 > 
-> ![Screenshot Output Guided 5](output/guided5.jpg)
+> ![Screenshot Output Guided 5](output/guided5.png)
 
 
 ---
@@ -310,7 +310,7 @@ int main()
 
 > Output
 > 
-> ![Screenshot Output Guided 6](output/guided6.jpg)
+> ![Screenshot Output Guided 6](output/guided6.png)
 
 
 
@@ -380,7 +380,7 @@ int main() {
 
 > Output
 > 
-> ![Screenshot Output Unguided 1](output/ss_unguided_1.jpg)
+> ![Screenshot Output Unguided 1](output/ss_unguided_1.png)
 
 
 ---
@@ -447,7 +447,7 @@ int main() {
 
 > Output
 > 
-> ![Screenshot Output Unguided 2](output/ss_unguided_2.jpg)
+> ![Screenshot Output Unguided 2](output/ss_unguided_2.png)
 
 
 ---
@@ -512,7 +512,7 @@ int main() {
 
 > Output
 > 
-> ![Screenshot Output Unguided 3](output/ss_unguided_3.jpg)
+> ![Screenshot Output Unguided 3](output/ss_unguided_3.png)
 
 
 
