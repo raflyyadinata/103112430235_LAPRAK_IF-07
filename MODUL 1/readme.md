@@ -326,11 +326,7 @@ int main()
 > 
 > ![Screenshot Output Guided 6](output/ss_guided_6.jpg)
 
-program ini bertujuan untuk menyimpan dan menampilkan data dari satu orang mahasiswa, menggunakan struct sebagai wadah penyimpanan data. pertama, didefinisikan sebuah struct dengan nama mahasiswa, yang berisi tiga anggota yaitu nama bertipe string, nim bertipe string, dan ipk bertipe float di dalam fungsi main.
 
-dibuat satu variabel bernama mhs1 bertipe mahasiswa. kemudian program akan meminta input dari user untuk tiga data, yaitu nama mahasiswa dibaca menggunakan getline agar bisa membaca spasi, nim mahasiswa dibaca dengan cin, dan ipk mahasiswa dibaca juga dengan cin.
-
-setelah data dimasukkan, program akan menampilkan ulang data tersebut ke layar, sesuai format.
 
 ---
 
@@ -400,15 +396,6 @@ int main() {
 > 
 > ![Screenshot Output Unguided 1](output/ss_unguided_1.jpg)
 
-program ini bertujuan untuk menampilkan hasil penjumlahan, pengurangan, perkalian, dan pembagian dari 2 angka bertipe float.
-
-prosedur readNumbers di awal program bertujuan untuk menerima 2 input angka dari variabel a dan b yang nantinya akan masuk ke proses perhitungan.
-
-setelah itu ada 4 fungsi utama yang menjadi core di program ini, yaitu addition, subtraction, multiplication, dan division. 4 fungsi ini memiliki 2 parameter yang sama yaitu angka bertipe float dari variabel a dan b.
-
-fungsi addition bekerja dengan cara menjumlahkan nilai dari variabel a dan b, kemudian fungsi subtraction bekerja dengan cara mengurangi nilai dari variabel a dengan variabel b, setelah itu fungsi multiplication bekerja dengan cara mengalikan nilai dari variabel a dengan variabel b, dan fungsi division bekerja dengan cara membagi nilai dari variabel a dengan variabel b.
-
-terakhir, fungsi main bertugas untuk mendeklarasikan variabel, memanggil fungsi, dan menampilkan hasil.
 
 ---
 
@@ -476,19 +463,6 @@ int main() {
 > 
 > ![Screenshot Output Unguided 2](output/ss_unguided_2.jpg)
 
-program ini bertujuan untuk menampilkan tulisan dari sebuah input angka dalam range 1 sampai 100.
-
-agar tidak 'hard-coded' dan agar efisien, kita butuh array yang menyimpan tulisan dari angka, tidak perlu semua, cukup satuan dan puluhan saja.
-
-jika angka yang diinput antara 1-10, maka menggunakan array satuan sebagai outputnya, cara kerjanya adalah mengambil index ke-n pada array berdasarkan angka yang diinput.
-
-jika angka antara 20-99, maka menggunakan array puluhan sebagai outputnya, tapi bedanya kita perlu membagi n dengan 10 agar kita mendapat satu angka puluhannya, misalkan 79 menjadi 7, kenapa? karena untuk mendapatkan index ke-7 yaitu tujuh puluh, kita hanya perlu input 7 saja.
-
-kemudian untuk mengambil bagian satuannya, kita ambil modulus 10, atau sisa bagi jika dibagi 10, kita mendapatkan sisa 9, 9 ini akan mengakses array satuan pada index ke-9, yaitu sembilan.
-
-jika angka antara 11-19, maka untuk angka 11 perlu ditulis manual, karena itu angka spesial, kemudian gunakan array satuan tapi dengan modulus 10, kenapa? sama seperti di kasus angka puluhan tadi, kita hanya perlu ambil bagian belakangnya saja untuk mengakses index pada array satuan, kemudian di bagian belakang ditambahkan tulisan belas.
-
-untuk angka 0 dan 100, ini diberi tulisan manual saja, yaitu nol dan seratus. jika angka di luar range 1 sampai 100, maka program menampilkan angka di luar 0-100.
 
 ---
 
@@ -554,26 +528,6 @@ int main() {
 > 
 > ![Screenshot Output Unguided 3](output/ss_unguided_3.jpg)
 
-program ini bertujuan untuk menampilkan urutan angka secara descending dan ada bintang di tengahnya seperti cermin, kemudian di sisi kanan bintang ada kebalikan dari urutan angka di sisi kiri, angka di sisi kanan diurutkan secara ascending.
 
-pertama, masukan jumlah n. masuk di perulangan pertama, yaitu for (int i = n; i >= 1; i--), ini berfungsi untuk melakukan pengulangan jumlah baris.
-
-perulangan kedua, yaitu for (int k = 0; k < n - i; k++), berfungsi untuk memberikan spasi sebelum mencetak angka, kenapa perlu spasi? agar bisa rata di tengah, jumlah spasinya mengikuti urutan perulangan.
-
-perulangan ketiga, yaitu for (int j = i; j >= 1; j--), berfungsi untuk menampilkan urutan angka di sisi kiri, yaitu angka yang diurutkan secara descending karena j--.
-
-sebagai cermin antara sisi kiri dan kanan, kita perlu menambahkan cout << "*";.
-
-perulangan keempat, yaitu for (int j = 1; j <= i; j++), berfungsi untuk menampilkan urutan angka di sisi kanan, yaitu angka yang diurutkan secara ascending karena j++.
-
-karena di bagian paling bawah terdapat 1 bintang tambahan dan bintang itu juga akan dibuat rata tengah, maka kita perlu spasi terlebih dahulu menggunakan for (int k = 0; k < n; k++).
-
-terakhir, cetak bintang di paling bawah dengan cout << "*";.
 
 ## Referensi
-
-1. https://www.w3schools.com/cpp/cpp_functions.asp (diakses Selasa, 23 September 2025)
-2. https://www.w3schools.com/cpp/cpp_for_loop.asp (diakses Rabu, 24 September 2025)
-3. https://www.w3schools.com/cpp/cpp_for_loop_nested.asp (diakses Rabu, 24 September 2025)
-4. https://www.w3schools.com/cpp/cpp_arrays.asp (diakses Kamis, 25 September 2025)
-5. https://www.w3schools.com/cpp/cpp_arrays_loop.asp (diakses Kamis, 25 Septmber 2025)
