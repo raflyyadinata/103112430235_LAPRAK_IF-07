@@ -3,7 +3,7 @@
 
 ## Dasar Teori
 
-
+Dalam C++, struct digunakan untuk mengelompokkan beberapa variabel menjadi satu data. Operasi aritmatika seperti tambah, kurang, kali, dan bagi digunakan untuk menghitung data. Pernyataan kondisi seperti if dan switch digunakan untuk membuat keputusan dalam program. Struktur perulangan seperti for dan while digunakan untuk mengulang kode. Sedangkan fungsi digunakan untuk membagi program menjadi bagian-bagian kecil agar lebih rapi dan mudah dipahami. Semua ini adalah dasar penting dalam membuat program C++ yang baik.
 
 ---
 
