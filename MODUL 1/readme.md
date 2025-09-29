@@ -3,21 +3,7 @@
 
 ## Dasar Teori
 
-### Program Operasi Aritmatika
-Konsep penting yang digunakan:
-- **Fungsi (function):** kode yang dapat dipanggil untuk tugas tertentu.
-- **Parameter & Return Value:** mengirim data ke fungsi dan pengembalian hasil.
-- **Input/Output:** menggunakan `cin` untuk input dari pengguna dan `cout` untuk menampilkan hasil.
 
-### Program Konversi Angka ke Teks (0–100)
-Konsep yang dipakai:
-- **Array:** digunakan untuk menyimpan tulisan satuan (`satuan[]`) dan puluhan (`puluhan[]`).
-- **Percabangan (if-else):** menentukan tulisan yang sesuai untuk setiap rentang angka (satuan, belasan, puluhan, seratus, dan nol).
-- **Operator Modulus (`%`) & Pembagian (`/`):** untuk memisahkan angka puluhan dan satuan.
-
-### Program Pola Angka dengan For Loop
-Konsep yang digunakan:
-- **Perulangan Bersarang (nested for loop):** digunakan untuk membuat baris dan kolom secara bersamaan.
 
 ---
 
