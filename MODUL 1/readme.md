@@ -297,61 +297,50 @@ Buatlah program yang menerima input-an dua buah bilangan bertipe float, kemudian
 #include <iostream>
 using namespace std;
 
-// function to read two float numbers from user input
-void readNumbers (float &a, float &b) {
-   cout << "enter first float number : ";
-   cin >> a;
-   cout << "enter second float number : ";
-   cin >> b;
-   cout << "ok, we have " << a << " and " << b << endl;
-   cout << "so..." << endl;
+// Fungsi untuk menjumlahkan dua angka
+float tambah(float a, float b) {
+    return a + b;
 }
 
-// function to add two numbers
-float addition (float a, float b) {
-   return a + b;
+// Fungsi untuk mengurangkan dua angka
+float kurang(float a, float b) {
+    return a - b;
 }
 
-// function to subtract two numbers
-float subtraction (float a, float b) {
-   return a - b;
+// Fungsi untuk mengalikan dua angka
+float kali(float a, float b) {
+    return a * b;
 }
 
-// function to multiply two numbers
-float multiplication (float a, float b) {
-   return a * b;
-}
-
-// function to divide two numbers
-float division (float a, float b) {
-   return a / b;
+// Fungsi untuk membagi dua angka
+float bagi(float a, float b) {
+    return a / b;
 }
 
 int main() {
-   // declare two floats
-   float a, b;
-   // read input values from user
-   readNumbers(a, b);
+    float a, b;
 
-   // perform calculations
-   float add = addition(a, b);
-   float sub = subtraction(a, b);
-   float mul = multiplication(a, b);
-   float div = division(a, b);
+    // Input dari pengguna
+    cout << "Masukkan angka pertama: ";
+    cin >> a;
+    cout << "Masukkan angka kedua  : ";
+    cin >> b;
 
-   // print results
-   cout << a << " + " << b << " = " << add  << endl;
-   cout << a << " - " << b << " = " << sub << endl;
-   cout << a << " * " << b << " = " << mul << endl;
-   cout << a << " / " << b << " = " << div << endl;
+    // Menampilkan hasil operasi
+    cout << "\nHasil Operasi:\n";
+    cout << a << " + " << b << " = " << tambah(a, b) << endl;
+    cout << a << " - " << b << " = " << kurang(a, b) << endl;
+    cout << a << " * " << b << " = " << kali(a, b) << endl;
+    cout << a << " / " << b << " = " << bagi(a, b) << endl;
 
-   return 0;
+    return 0;
 }
+
 ```
 
 > Output
 > 
-> ![Screenshot Output Unguided 1](output/ss_unguided_1.png)
+> ![Screenshot Output Unguided 1](output/unguided1.png)
 
 
 ---
@@ -367,58 +356,44 @@ Buatlah sebuah program yang menerima menerima masukan angka dan mengeluarkan out
 using namespace std;
 
 int main() {
-   // array 1-10
-   string satuan[]  = {"", "satu", "dua", "tiga", "empat", "lima", "enam", "tujuh", "delapan", "sembilan", "sepuluh"};
-   // array 20, 30, 40, ..., 90
-   string puluhan[] = {"", "", "dua puluh", "tiga puluh", "empat puluh", "lima puluh", "enam puluh", "tujuh puluh", "delapan puluh", "sembilan puluh"};
+    string satuan[]  = {"", "satu", "dua", "tiga", "empat", "lima", "enam", "tujuh", "delapan", "sembilan", "sepuluh"};
+    string puluhan[] = {"", "", "dua puluh", "tiga puluh", "empat puluh", "lima puluh", 
+                        "enam puluh", "tujuh puluh", "delapan puluh", "sembilan puluh"};
 
-   // declare n
-   int n;
-   // read n values from user
-   cout << "enter number 0-100 : ";
-   cin >> n;
+    int n;
+    cout << "Masukkan angka (0 - 100): ";
+    cin >> n;
 
-   // 1 -10
-   if (n >= 1 && n <= 10) {
-      cout << satuan[n];
-   }
+    if (n == 0) {
+        cout << "nol";
+    }
+    else if (n >= 1 && n <= 10) {
+        cout << satuan[n];
+    }
+    else if (n == 11) {
+        cout << "sebelas";
+    }
+    else if (n >= 12 && n <= 19) {
+        cout << satuan[n % 10] << " belas";
+    }
+    else if (n >= 20 && n <= 99) {
+        cout << puluhan[n / 10] << " " << satuan[n % 10];
+    }
+    else if (n == 100) {
+        cout << "seratus";
+    }
+    else {
+        cout << "Angka di luar jangkauan (0 - 100)";
+    }
 
-   // 20 - 99
-   else if (n >= 20 && n <= 99) {
-      cout << puluhan[n/10] << " " << satuan[n%10];
-   }
-
-   // 11 - 19
-   else if (n >= 11 && n <= 19) {
-      if (n == 11) {
-         cout << "sebelas";
-      } else {
-         cout << satuan[n % 10] << " belas";
-      }
-   }
-
-   // 0
-   else if (n == 0) {
-      cout << "nol";
-   }
-
-   // 100
-   else if (n == 100) {
-      cout << "seratus";
-   }
-
-   // not 0-100
-   else {
-      cout << "angka di luar 0-100";
-   }
-
-   return 0;
+    return 0;
 }
+
 ```
 
 > Output
 > 
-> ![Screenshot Output Unguided 2](output/ss_unguided_2.png)
+> ![Screenshot Output Unguided 2](output/unguided2.png)
 
 
 ---
@@ -441,49 +416,49 @@ output :
 using namespace std;
 
 int main() {
-   // declare n
-   int n;
-   // read n values from user
-   cout << "enter n : ";
-   cin >> n;
+    int n;
 
-   // outer for to create rows
-   for (int i = n; i >= 1; i--) {
-      // inner for to print space before numbers
-      for (int k = 0; k < n - i; k++) {
-         cout << " ";
-      }
+    // Input dari pengguna
+    cout << "Masukkan angka n: ";
+    cin >> n;
 
-      // inner for to print descending numbers
-      for (int j = i; j >= 1; j--) {
-         cout << j;
-      }
+    // Baris atas pola
+    for (int i = n; i >= 1; i--) {
+        // Spasi di awal
+        for (int spasi = 0; spasi < n - i; spasi++) {
+            cout << " ";
+        }
 
-      // print * as a mirror
-      cout << "*";
+        // Angka menurun
+        for (int j = i; j >= 1; j--) {
+            cout << j;
+        }
 
-      // inner for to print ascending numbers
-      for (int j = 1; j <= i; j++) {
-         cout << j;
-      }
-      cout << endl;
-   }
+        // Bintang tengah
+        cout << "*";
 
-   // 2nd outer for to print space before last *
-   for (int k = 0; k < n; k++) {
-      cout << " ";
-   }
+        // Angka menaik
+        for (int j = 1; j <= i; j++) {
+            cout << j;
+        }
 
-   // * tail
-   cout << "*";
+        cout << endl;
+    }
 
-   return 0;
+    // Baris bawah (ekor bintang)
+    for (int spasi = 0; spasi < n; spasi++) {
+        cout << " ";
+    }
+    cout << "*";
+
+    return 0;
 }
+
 ```
 
 > Output
 > 
-> ![Screenshot Output Unguided 3](output/ss_unguided_3.png)
+> ![Screenshot Output Unguided 3](output/unguided3.png)
 
 
 
