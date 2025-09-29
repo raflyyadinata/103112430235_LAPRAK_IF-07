@@ -76,7 +76,7 @@ int main()
 
 > Output
 > 
-> ![Screenshot Output Guided 2](output/guided2.png)
+> ![Screenshot Output Guided 2](output/guidedd2.png)
 
 
 
