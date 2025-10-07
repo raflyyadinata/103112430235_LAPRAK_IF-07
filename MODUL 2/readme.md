@@ -3,7 +3,6 @@
 
 ## Dasar Teori
 
-Dalam C++, struct digunakan untuk mengelompokkan beberapa variabel menjadi satu data. Operasi aritmatika seperti tambah, kurang, kali, dan bagi digunakan untuk menghitung data. Pernyataan kondisi seperti if dan switch digunakan untuk membuat keputusan dalam program. Struktur perulangan seperti for dan while digunakan untuk mengulang kode. Sedangkan fungsi digunakan untuk membagi program menjadi bagian-bagian kecil agar lebih rapi dan mudah dipahami. Semua ini adalah dasar penting dalam membuat program C++ yang baik.
 
 ---
 
@@ -37,7 +36,7 @@ void tukar(int *px, int *py)
 ```
 
 > Output
-> membuat tipe data Mahasiswa yang memiliki atribut nama, nim, dan ipk. Program meminta input dari pengguna, menyimpan data ke dalam struct, dan menampilkannya kembali ke layar.
+> 
 > ![Screenshot Output Guided 1](output/guided1.png)
 
 
@@ -72,7 +71,7 @@ void tukar(int &x, int &y)
 ```
 
 > Output
-> operasi aritmatika dengan variabel bertipe int dan float. Nilai X, Y, dan W dijumlahkan/dibagi, lalu hasilnya (float) ditampilkan ke layar.
+> 
 > ![Screenshot Output Guided 2](output/guided2.png)
 
 
@@ -139,7 +138,7 @@ int main() {
 ```
 
 > Output
-> menerima dua input bilangan bertipe float  . kemudian menghitung hasil dari operasi penjumlahan, pengurangan, perkalian, dan pembagian. Setiap operasi dipisahkan dalam fungsi tersendiri agar kode lebih terstruktur dan mudah dibaca. Input dibaca menggunakan cin, dan hasil ditampilkan dengan cout.
+> 
 > ![Screenshot Output Unguided 1](output/unguided1.png)
 
 
@@ -178,7 +177,7 @@ int main() {
 ```
 
 > Output
-> mengubah input berupa angka bulat dari 0 hingga 100 menjadi bentuk tulisan dalam Bahasa Indonesia. Program menggunakan array untuk menyimpan nama-nama angka satuan dan puluhan, serta menggunakan logika percabangan if-else untuk menangani kondisi khusus seperti angka 11, belasan, dan 100. Operator pembagian (/) dan modulo (%) digunakan untuk memisahkan digit puluhan dan satuan.
+> 
 > ![Screenshot Output Unguided 2](output/unguided2.png)
 
 
