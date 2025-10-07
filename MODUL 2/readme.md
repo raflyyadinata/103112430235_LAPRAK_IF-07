@@ -81,7 +81,6 @@ void tukar(int &x, int &y)
 
 > Output
 > Fungsi tukar() menerima dua variabel by reference.
-
 Artinya: x dan y langsung mereferensikan a dan b dari main() — tanpa pointer.
 > ![Screenshot Output Guided 2](output/guided2.png)
 
@@ -150,9 +149,7 @@ int main() {
 
 > Output
 > Loop ini menukar baris dan kolom.
-
 Misal:
-
 matriks[0][1] = 2 akan dipindahkan ke transpose[1][0].
 > ![Screenshot Output Unguided 1](output/unguided1.png)
 
@@ -192,7 +189,6 @@ int main() {
 
 > Output
 > Fungsi ini menerima parameter integer by reference.
-
 Nilai x diubah menjadi kuadratnya (x²) langsung mengubah variabel asli.
 > ![Screenshot Output Unguided 2](output/unguided2.png)
 
@@ -202,7 +198,6 @@ Nilai x diubah menjadi kuadratnya (x²) langsung mengubah variabel asli.
 
 ## Referensi
 
-https://www.duniailkom.com/tutorial-belajar-c-plus-plus-cara-membuat-fungsi-bahasa-c-plus-plus/#google_vignette (diakses 27 September 2025)
-https://www.youtube.com/watch?v=hVzmJwyMH2Q&t=10s (diakses 29 September 2025)
-https://www.belajarcpp.com/tutorial/cpp/struct/ (diakses 29 September 2025)
-https://www.duniailkom.com/tutorial-belajar-c-plus-plus-perulangan-while-bahasa-c-plus-plus/ (diakses 30 September 2025)
+https://www.geeksforgeeks.org/cpp/pointers-vs-references-cpp/ (diakses 5 Oktober 2025)
+https://www.w3schools.com/cpp/cpp_pointers.asp (diakses 5 Oktober 2025)
+https://codefinity.com/blog/References-vs-Pointers-in-C-plus-plus (diakses 6 Oktober 2025)
