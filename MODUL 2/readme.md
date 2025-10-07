@@ -2,7 +2,11 @@
 <p align="center">RAFLY ADINATA PRAYOGA - 103112430235</p>
 
 ## Dasar Teori
+Call by Pointer dan Call by Reference adalah dua teknik dalam pemanggilan fungsi yang memungkinkan kita untuk mengubah nilai asli dari variabel yang dikirimkan ke fungsi. 
 
+Call by Pointer menggunakan konsep alamat memori, variabel yang dikirimkan ke fungsi akan diakses melalui pointer. Tanda * digunakan untuk mendeklarasikan pointer dan mengakses nilai yang ditunjuk, sedangkan & digunakan saat memanggil fungsi untuk mengirimkan alamat variabel.
+
+Call by Reference adalah fitur khas bahasa C++ yang menggunakan simbol & di parameter fungsi untuk menyatakan bahwa variabel dikirim sebagai referensi.variabel dalam fungsi merujuk langsung ke variabel asli di luar fungsi, sehingga perubahan yang dilakukan akan berdampak langsung pada variabel tersebut.
 
 ---
 
@@ -36,7 +40,17 @@ void tukar(int *px, int *py)
 ```
 
 > Output
-> 
+> Fungsi tukar() menerima dua pointer ke int (*px dan *py).
+
+*px artinya nilai di alamat yang ditunjuk oleh px.
+
+Proses menukar:
+
+Simpan nilai *px ke temp.
+
+Salin nilai *py ke *px.
+
+Salin temp ke *py.
 > ![Screenshot Output Guided 1](output/guided1.png)
 
 
@@ -71,7 +85,9 @@ void tukar(int &x, int &y)
 ```
 
 > Output
-> 
+> Fungsi tukar() menerima dua variabel by reference.
+
+Artinya: x dan y langsung mereferensikan a dan b dari main() — tanpa pointer.
 > ![Screenshot Output Guided 2](output/guided2.png)
 
 
@@ -138,9 +154,12 @@ int main() {
 ```
 
 > Output
-> 
-> ![Screenshot Output Unguided 1](output/unguided1.png)
+> Loop ini menukar baris dan kolom.
 
+Misal:
+
+matriks[0][1] = 2 akan dipindahkan ke transpose[1][0].
+> ![Screenshot Output Unguided 1](output/unguided1.png)
 
 ---
 
@@ -177,7 +196,9 @@ int main() {
 ```
 
 > Output
-> 
+> Fungsi ini menerima parameter integer by reference.
+
+Nilai x diubah menjadi kuadratnya (x²) langsung mengubah variabel asli.
 > ![Screenshot Output Unguided 2](output/unguided2.png)
 
 
