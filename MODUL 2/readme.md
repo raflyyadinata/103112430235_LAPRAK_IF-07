@@ -73,7 +73,7 @@ void tukar(int &x, int &y)
 
 > Output
 > operasi aritmatika dengan variabel bertipe int dan float. Nilai X, Y, dan W dijumlahkan/dibagi, lalu hasilnya (float) ditampilkan ke layar.
-> ![Screenshot Output Guided 2](output/guidedd2.png)
+> ![Screenshot Output Guided 2](output/guided2.png)
 
 
 
