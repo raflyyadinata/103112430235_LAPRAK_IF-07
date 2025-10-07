@@ -41,15 +41,10 @@ void tukar(int *px, int *py)
 
 > Output
 > Fungsi tukar() menerima dua pointer ke int (*px dan *py).
-
 *px artinya nilai di alamat yang ditunjuk oleh px.
-
 Proses menukar:
-
 Simpan nilai *px ke temp.
-
 Salin nilai *py ke *px.
-
 Salin temp ke *py.
 > ![Screenshot Output Guided 1](output/guided1.png)
 
