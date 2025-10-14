@@ -10,7 +10,6 @@
 
 ### Soal 1
 
-CALL BY POINTER
 
 ```cpp
 #include <iostream>
