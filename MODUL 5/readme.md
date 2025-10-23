@@ -21,7 +21,7 @@ struct Node {
     Node* next;
 };
 
-// Pointer awal dan akhir
+// Pointer awal
 Node* head = nullptr;
 
 // Fungsi untuk membuat node baru
@@ -32,7 +32,15 @@ Node* createNode(int data) {
     return newNode;
 }
 
+// ========== INSERT DEPAN ==========
+void insertDepan(int data) {
+    Node* newNode = createNode(data);
+    newNode->next = head;
+    head = newNode;
+    cout << "Data " << data << " berhasil ditambahkan di depan.\n";
+}
 
+// ========== INSERT BELAKANG ==========
 void insertBelakang(int data) {
     Node* newNode = createNode(data);
     if (head == nullptr) {
@@ -47,6 +55,7 @@ void insertBelakang(int data) {
     cout << "Data " << data << " berhasil ditambahkan di belakang.\n";
 }
 
+// ========== INSERT SETELAH NODE ==========
 void insertSetelah(int target, int dataBaru) {
     Node* temp = head;
     while (temp != nullptr && temp->data != target) {
@@ -124,7 +133,7 @@ void tampilkanList() {
     cout << "Isi Linked List: ";
     while (temp != nullptr) {
         cout << temp->data << " -> ";
-        temp = temp->next
+        temp = temp->next;
     }
     cout << "NULL\n";
 }
@@ -188,10 +197,16 @@ int main() {
 
     return 0;
 }
+
 ```
 
 > Output
-> 
+> * insertDepan() → tambah data di awal
+> * insertBelakang() → tambah data di akhir
+> * insertSetelah() → sisipkan setelah data tertentu
+> * hapusNode() → hapus node tertentu
+> * updateNode() → ubah data lama menjadi baru
+> * tampilkanList() → menampilkan isi list
 > ![Screenshot Output Guided 1](output/guided1.png)
 
 
@@ -444,7 +459,9 @@ int main() {
 ```
 
 > Output
-> 
+> * findElm() → mencari data tertentu
+> * invertList() → membalik urutan node
+> * copyList() → menyalin isi list ke list lain
 > ![Screenshot Output Guided 1](output/guided1.png)
 
 
@@ -611,7 +628,10 @@ int main() {
 ```
 
 > Output
-> 
+> * Tambah pembeli (tambahAntrian)
+> * Layani pembeli pertama (layaniAntrian)
+> * Tampilkan semua antrian (tampilAntrian)
+> * Cari pembeli berdasarkan nama (cariPembeli)
 > ![Screenshot Output Unguided 1](output/unguided1.png)
 
 ---
@@ -829,7 +849,10 @@ int main() {
 ```
 
 > Output
-> 
+> Tambah, hapus, dan update buku Tampilkan semua buku
+> * Pencarian berdasarkan: Struktur data Buku menyimpan informasi:
+> * ISBN | Judul | Penulis | Pointer next
+> Konsep utama di sini adalah traversal dan pencarian sekuensial pada linked list untuk menemukan data buku yang sesuai.
 > ![Screenshot Output Unguided 2](output/unguided2.png)
 
 
