@@ -16,7 +16,7 @@ Operasi yang bisa dilakukan pada data tersebut (seperti menambah, menghapus, men
 
 ### Soal 1
 
-
+> mahasiswa.cpp
 ```mahasiswa.cpp
 #include "mahasiswa.h"
 #include <iostream>
@@ -39,6 +39,7 @@ float rata2(mahasiswa m)
 
 
 ```
+> mahasiswa.h
 ```mahasiswa.h
 #ifndef MAHASISWA_H_INCLUDED
 #define MAHASISWA_H_INCLUDED
@@ -56,6 +57,7 @@ float rata2(mahasiswa m);
 
 
 ```
+> main.cpp
 ```main.cpp
 #include <iostream>
 #include "mahasiswa.h"
