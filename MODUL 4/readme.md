@@ -5,8 +5,8 @@
 ---
 Singly Linked List adalah struktur data dinamis yang terdiri dari elemen-elemen yang disebut node.
 > Setiap node memiliki dua bagian utama:
-Data: menyimpan nilai atau informasi.
-Pointer next: menunjuk ke node berikutnya di dalam list.
+> Data: menyimpan nilai atau informasi.
+> Pointer next: menunjuk ke node berikutnya di dalam list.
 ## Guided
 
 ### Soal 1
