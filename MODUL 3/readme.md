@@ -73,7 +73,9 @@ int main(){
 ```
 
 > Output
-> 
+> * inputMhs() untuk menerima input data mahasiswa.
+> * rata2() untuk menghitung rata-rata nilai mahasiswa.
+> * Konsep ADT terlihat dari pemisahan antara definisi struktur (mahasiswa) dan implementasi fungsi (inputMhs, rata2) di file terpisah.
 > ![Screenshot Output Guided 1](output/guided1.png)
 
 
@@ -156,7 +158,7 @@ int main() {
 ```
 
 > Output
-> 
+> Konsep fungsi terpisah (hitungNilaiAkhir, tampilMahasiswa) membuat program modular dan mudah dipahami.
 > ![Screenshot Output Unguided 1](output/unguided1.png)
 
 ---
@@ -222,7 +224,8 @@ int main() {
 ```
 
 > Output
-> 
+> * create_pelajaran() membuat objek pelajaran.
+> * tampil_pelajaran() menampilkan datanya.
 > ![Screenshot Output Unguided 2](output/unguided2.png)
 
 
@@ -305,11 +308,11 @@ int main() {
 ```
 
 > Output
-> 
+> konsep fungsi, referensi, dan pointer.Fungsi tukarPosisi() menukar elemen antar array 2D, sedangkan tukarPointer() menukar nilai antar variabel melalui alamat memori.
 > ![Screenshot Output Unguided 2](output/unguided3.png)
 
 ## Referensi
-
-https://www.geeksforgeeks.org/cpp/pointers-vs-references-cpp/ (diakses 5 Oktober 2025)
-https://www.w3schools.com/cpp/cpp_pointers.asp (diakses 5 Oktober 2025)
-https://codefinity.com/blog/References-vs-Pointers-in-C-plus-plus (diakses 6 Oktober 2025)
+> Drozdek, A. (2013). Data Structures and Algorithms in C++. Cengage Learning.
+> Goodrich, M. T., Tamassia, R., & Mount, D. M. (2011). Data Structures and Algorithms in C++. Wiley.
+> Tutorialspoint. (n.d.). C++ - Abstract Data Types (ADT). Retrieved from https://www.tutorialspoint.com/cplusplus
+> Modul Praktikum Struktur Data – Universitas Muhammadiyah Malang.
