@@ -83,99 +83,79 @@ Salin temp ke *py.
 
 
 
----
-
-### Soal 2
-
-CALL BY REFERENCE
-```cpp
-#include <iostream>
-using namespace std;
-
-void tukar(int &x, int &y);   
-
-int main()
-{
-    int a = 10, b = 20;
-    cout << "Sebelum ditukar: a = " << a << ", b = " << b << endl;
-    tukar(a, b);
-    cout << "Setelah ditukar: a = " << a << ", b = " << b << endl;
-    return 0;
-}
-
-void tukar(int &x, int &y)
-{
-    int temp = x;
-    x = y;
-    y = temp;
-}
-
-```
-
-> Output
-> Fungsi tukar() menerima dua variabel by reference.
-Artinya: x dan y langsung mereferensikan a dan b dari main() — tanpa pointer.
-> ![Screenshot Output Guided 2](output/guided2.png)
-
-
-
----
-
 ## Unguided
 
 ### Soal 1
 
-1. Buatlah sebuah program untuk melakukan transpose pada sebuah matriks persegi berukuran 3x3. Operasi transpose adalah mengubah baris menjadi kolom dan sebaliknya. Inisialisasi matriks awal di dalam kode, kemudian buat logika untuk melakukan transpose dan simpan hasilnya ke dalam matriks baru. Terakhir, tampilkan matriks awal dan matriks hasil transpose.
+Buat program yang dapat menyimpan data mahasiswa (max. 10) ke dalam sebuah array dengan field nama, nim, uts, uas, tugas, dan nilai akhir. Nilai akhir diperoleh dari FUNGSI dengan rumus 0.3uts+0.4uas+0.3*tugas.
 
-Contoh Output:
-
-Matriks Awal:
-1 2 3
-4 5 6
-7 8 9
-
-Matriks Hasil Transpose:
-1 4 7
-2 5 8
-3 6 9
 
 ```cpp
 #include <iostream>
+#include <string>
 using namespace std;
 
+struct Mahasiswa {
+    string nama;
+    string nim;
+    float uts, uas, tugas, nilaiAkhir;
+};
+
+float hitungNilaiAkhir(float uts, float uas, float tugas) {
+    return uts * 0.3 + uas * 0.4 + tugas * 0.3;
+}
+
+void inputMahasiswa(Mahasiswa &mhs) {
+    cout << "Masukkan Nama    : ";
+    getline(cin, mhs.nama);
+    cout << "Masukkan NIM     : ";
+    getline(cin, mhs.nim);
+    cout << "Masukkan Nilai UTS   : ";
+    cin >> mhs.uts;
+    cout << "Masukkan Nilai UAS   : ";
+    cin >> mhs.uas;
+    cout << "Masukkan Nilai Tugas : ";
+    cin >> mhs.tugas;
+    mhs.nilaiAkhir = hitungNilaiAkhir(mhs.uts, mhs.uas, mhs.tugas);
+}
+
+void tampilMahasiswa(Mahasiswa mhs[], int jumlah) {
+    cout << "\n================ DAFTAR MAHASISWA ================\n";
+    for (int i = 0; i < jumlah; i++) {
+        cout << "\nMahasiswa ke-" << i + 1 << endl;
+        cout << "Nama        : " << mhs[i].nama << endl;
+        cout << "NIM         : " << mhs[i].nim << endl;
+        cout << "Nilai UTS   : " << mhs[i].uts << endl;
+        cout << "Nilai UAS   : " << mhs[i].uas << endl;
+        cout << "Nilai Tugas : " << mhs[i].tugas << endl;
+        cout << "Nilai Akhir : " << mhs[i].nilaiAkhir << endl;
+        cout << "--------------------------------------------------\n";
+    }
+}
+
 int main() {
-    int matriks[3][3] = {
-        {1, 2, 3},
-        {4, 5, 6},
-        {7, 8, 9}
-    };
+    Mahasiswa daftarMhs[10];
+    int jumlah;
 
-    int transpose[3][3];
-    
-    for (int i = 0; i < 3; i++) {
-        for (int j = 0; j < 3; j++) {
-            transpose[j][i] = matriks[i][j];
-        }
+    cout << "Masukkan jumlah mahasiswa (max 10): ";
+    cin >> jumlah;
+    cin.ignore();
+
+    if (jumlah < 1 || jumlah > 10) {
+        cout << "Jumlah mahasiswa tidak valid!" << endl;
+        return 0;
     }
 
-    cout << "Matriks Awal:" << endl;
-    for (int i = 0; i < 3; i++) {
-        for (int j = 0; j < 3; j++) {
-            cout << matriks[i][j] << " ";
-        }
-        cout << endl;
+    for (int i = 0; i < jumlah; i++) {
+        cout << "\nInput data mahasiswa ke-" << i + 1 << endl;
+        inputMahasiswa(daftarMhs[i]);
     }
 
-    cout << "\nMatriks Hasil Transpose:" << endl;
-    for (int i = 0; i < 3; i++) {
-        for (int j = 0; j < 3; j++) {
-            cout << transpose[i][j] << " ";
-        }
-        cout << endl;
-    }
+    tampilMahasiswa(daftarMhs, jumlah);
 
     return 0;
 }
+
 
 
 ```
@@ -190,34 +170,62 @@ matriks[0][1] = 2 akan dipindahkan ke transpose[1][0].
 
 ### Soal 2
 
-2. Buatlah program yang menunjukkan penggunaan call by reference. Buat sebuah prosedur bernama kuadratkan yang menerima satu parameter integer secara referensi (&). Prosedur ini akan mengubah nilai asli variabel yang dilewatkan dengan nilai kuadratnya. Tampilkan nilai variabel di main() sebelum dan sesudah memanggil prosedur untuk membuktikan perubahannya. 
+2. Buatlah ADT pelajaran sebagai berikut di dalam file “pelajaran.h”
+   Buatlah implementasi ADT pelajaran pada file “pelajaran.cpp” Cobalah hasil implementasi ADT pada file “main.cpp”
 
-Contoh Output:
-
-Nilai awal: 5
-Nilai setelah dikuadratkan: 25
-
-
+>pelajaran.h
 ```cpp
-#include <iostream>
+#ifndef PELAJARAN_H_INCLUDED
+#define PELAJARAN_H_INCLUDED
+
+#include <string>
 using namespace std;
 
-void kuadratkan(int &x) {
-    x = x * x;
+struct pelajaran {
+    string namaMapel;
+    string kodeMapel;
+};
+
+pelajaran create_pelajaran(string namapel, string kodepel);
+
+void tampil_pelajaran(pelajaran pel);
+
+#endif
+```
+>pelajaran.cpp
+```cpp
+#include <iostream>
+#include "pelajaran.h"
+using namespace std;
+
+pelajaran create_pelajaran(string namapel, string kodepel) {
+    pelajaran p;
+    p.namaMapel = namapel;
+    p.kodeMapel = kodepel;
+    return p;
 }
 
+void tampil_pelajaran(pelajaran pel) {
+    cout << "nama pelajaran : " << pel.namaMapel << endl;
+    cout << "nilai : " << pel.kodeMapel << endl;
+}
+```
+main.cpp
+```cpp
+#include <iostream>
+#include "pelajaran.h"
+using namespace std;
+
 int main() {
-    int angka = 5;
+    string namapel = "Struktur Data";
+    string kodepel = "STD";
 
-    cout << "Nilai awal: " << angka << endl;
+    pelajaran pel = create_pelajaran(namapel, kodepel);
 
-    kuadratkan(angka);
-
-    cout << "Nilai setelah dikuadratkan: " << angka << endl;
+    tampil_pelajaran(pel);
 
     return 0;
 }
-
 ```
 
 > Output
