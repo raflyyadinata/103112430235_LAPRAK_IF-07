@@ -408,5 +408,8 @@ int main() {
 ---
 
 ## Referensi
-> 
+> Koffman, E. B., & Wolfgang, P. A. T. (2010). Data Structures: Abstraction and Design Using Java. Wiley.
+> Malik, D. S. (2018). Data Structures Using C++. Cengage Learning.
+> GeeksforGeeks. (n.d.). Singly Linked List in C++
+> Tutorialspoint. (n.d.). C++ Linked List Data Structure
 
