@@ -2,7 +2,12 @@
 <p align="center">RAFLY ADINATA PRAYOGA - 103112430235</p>
 
 ## Dasar Teori
+Singly Linked List adalah struktur data dinamis yang terdiri dari elemen-elemen yang disebut node.
+Setiap node memiliki dua bagian utama:
 
+Data: menyimpan nilai atau informasi.
+
+Pointer next: menunjuk ke node berikutnya di dalam list.
 ---
 
 ## Guided
