@@ -73,12 +73,7 @@ int main(){
 ```
 
 > Output
-> Fungsi tukar() menerima dua pointer ke int (*px dan *py).
-*px artinya nilai di alamat yang ditunjuk oleh px.
-Proses menukar:
-Simpan nilai *px ke temp.
-Salin nilai *py ke *px.
-Salin temp ke *py.
+> 
 > ![Screenshot Output Guided 1](output/guided1.png)
 
 
@@ -161,9 +156,7 @@ int main() {
 ```
 
 > Output
-> Loop ini menukar baris dan kolom.
-Misal:
-matriks[0][1] = 2 akan dipindahkan ke transpose[1][0].
+> 
 > ![Screenshot Output Unguided 1](output/unguided1.png)
 
 ---
@@ -229,13 +222,91 @@ int main() {
 ```
 
 > Output
-> Fungsi ini menerima parameter integer by reference.
-Nilai x diubah menjadi kuadratnya (x²) langsung mengubah variabel asli.
+> 
 > ![Screenshot Output Unguided 2](output/unguided2.png)
 
 
 ---
 
+### Soal 3
+
+3. Buatlah ADT pelajaran sebagai berikut di dalam file “pelajaran.h”
+   Buatlah implementasi ADT pelajaran pada file “pelajaran.cpp” Cobalah hasil implementasi ADT pada file “main.cpp”
+
+```cpp
+#include <iostream>
+using namespace std;
+
+void tampilArray(int arr[3][3]) {
+    for (int i = 0; i < 3; i++) {
+        for (int j = 0; j < 3; j++) {
+            cout << arr[i][j] << "\t";
+        }
+        cout << endl;
+    }
+}
+
+void tukarNilai(int &a, int &b) {
+    int temp = a;
+    a = b;
+    b = temp;
+}
+
+void tukarPosisi(int arr1[3][3], int arr2[3][3], int baris, int kolom) {
+    tukarNilai(arr1[baris][kolom], arr2[baris][kolom]);
+}
+
+void tukarPointer(int *p1, int *p2) {
+    int temp = *p1;
+    *p1 = *p2;
+    *p2 = temp;
+}
+
+int main() {
+    int A[3][3] = {
+        {1, 2, 3},
+        {4, 5, 6},
+        {7, 8, 9}
+    };
+
+    int B[3][3] = {
+        {10, 11, 12},
+        {13, 14, 15},
+        {16, 17, 18}
+    };
+
+    cout << "Array A sebelum ditukar:\n";
+    tampilArray(A);
+    cout << "\nArray B sebelum ditukar:\n";
+    tampilArray(B);
+
+    tukarPosisi(A, B, 1, 1); // Tukar elemen [1][1]
+
+    cout << "\nArray setelah menukar elemen posisi [1][1]:\n";
+    cout << "Array A:\n";
+    tampilArray(A);
+    cout << "\nArray B:\n";
+    tampilArray(B);
+
+    int x = 50, y = 100;
+    int *ptrX = &x;
+    int *ptrY = &y;
+
+    cout << "\nNilai sebelum ditukar melalui pointer:\n";
+    cout << "x = " << x << ", y = " << y << endl;
+
+    tukarPointer(ptrX, ptrY);
+
+    cout << "Nilai setelah ditukar melalui pointer:\n";
+    cout << "x = " << x << ", y = " << y << endl;
+
+    return 0;
+}
+```
+
+> Output
+> 
+> ![Screenshot Output Unguided 2](output/unguided3.png)
 
 ## Referensi
 
