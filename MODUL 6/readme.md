@@ -1,4 +1,4 @@
-<h1 align="center">Laporan Praktikum Modul 3 <br>singly linked list bag 1</h1>
+<h1 align="center">Laporan Praktikum Modul  <br>judul</h1>
 <p align="center">RAFLY ADINATA PRAYOGA - 103112430235</p>
 
 ## Dasar Teori
