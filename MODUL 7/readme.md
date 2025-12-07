@@ -486,7 +486,7 @@ int main() {
     cout << "\nSetelah dibalik:" << endl;
     balikStack(S);
     printInfo(S);
-
+https://cplusplus.com/reference/stack/stack/?utm_source=chatgpt.com
     return 0;
 }
 ```
@@ -496,14 +496,8 @@ int main() {
 > ![Screenshot Output Unguided 3](output/unguided3.png)
 
 ## Referensi
-> A. Drozdek, Data Structures and Algorithms in C++, 4th Edition. Cengage Learning, 2013.
-
->Y. Langsam, M. J. Augenstein, A. M. Tenenbaum, Data Structures Using C and C++, Prentice Hall, 1996.
-
->S. Malik, C++ Programming: From Problem Analysis to Program Design, 8th Edition. Cengage Learning, 2017.
-
->Documentation of C++ (cplusplus.com) – Stack Data Structure: https://www.cplusplus.com
-
->GeeksforGeeks – Stack Data Structure: https://www.geeksforgeeks.org/stack-data-structure/
+> https://www.w3schools.com/cpp/cpp_stacks.asp?utm_source=chatgpt.com
+> https://cplusplus.com/reference/stack/stack/?utm_source=chatgpt.com
+> https://www.geeksforgeeks.org/stack-data-structure/
 
 
