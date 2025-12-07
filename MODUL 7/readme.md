@@ -227,7 +227,7 @@ int main() {
 
 ### Soal 2
 
-2. ![Screenshot Output soal 2(output/soal2.png)
+2. ![Screenshot Output soal 2](output/soal2.png)
 
 >stack.h
 ```cpp
