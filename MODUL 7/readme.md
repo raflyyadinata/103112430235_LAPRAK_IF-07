@@ -10,7 +10,7 @@ Stack adalah struktur data yang memungkinkan ketika data terakhir masuk maka dat
 ### Soal 1
 
 > 
-```
+```cpp
 #include <iostream>
 using namespace std;
 
