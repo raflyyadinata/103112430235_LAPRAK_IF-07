@@ -497,7 +497,9 @@ https://cplusplus.com/reference/stack/stack/?utm_source=chatgpt.com
 
 ## Referensi
 > https://www.w3schools.com/cpp/cpp_stacks.asp?utm_source=chatgpt.com
+
 > https://cplusplus.com/reference/stack/stack/?utm_source=chatgpt.com
+
 > https://www.geeksforgeeks.org/stack-data-structure/
 
 
