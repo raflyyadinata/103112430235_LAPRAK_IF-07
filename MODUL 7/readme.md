@@ -95,9 +95,9 @@ int main()
 
 ## Unguided
 
-### Soal 1
+### Soal 
 
-
+1. ![Screenshot Output Guided 1](output/soal1.png)
 
 > stack.h
 ```cpp
@@ -227,7 +227,7 @@ int main() {
 
 ### Soal 2
 
-2. 
+2. ![Screenshot Output Guided 1](output/soal1.png)
 
 >stack.h
 ```cpp
@@ -369,8 +369,9 @@ int main() {
 
 ### Soal 3
 
-3. 
-stack.h
+3. ![Screenshot Output Guided 1](output/soal1.png)
+
+>stack.h
 ```cpp
 #ifndef STACK_H
 #define STACK_H
@@ -394,7 +395,7 @@ void getInputStream(Stack &S);
 
 
 ```
-stack.cpp
+>stack.cpp
 ```cpp
 #include <iostream>
 #include "stack.h"
@@ -464,7 +465,7 @@ void getInputStream(Stack &S) {
     }
 }
 ```
-main.cpp
+>main.cpp
 ```cpp
 #include <iostream>
 #include "stack.h"
