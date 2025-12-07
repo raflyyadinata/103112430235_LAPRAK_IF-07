@@ -97,7 +97,7 @@ int main()
 
 ### Soal 
 
-1. ![Screenshot Output Guided 1](output/soal1.png)
+1. ![Screenshot Output soal 1](output/soal1.png)
 
 > stack.h
 ```cpp
@@ -227,7 +227,7 @@ int main() {
 
 ### Soal 2
 
-2. ![Screenshot Output Guided 1](output/soal1.png)
+2. ![Screenshot Output soal 2(output/soal2.png)
 
 >stack.h
 ```cpp
@@ -369,7 +369,7 @@ int main() {
 
 ### Soal 3
 
-3. ![Screenshot Output Guided 1](output/soal1.png)
+3. ![Screenshot Output soal 3](output/soal3.png)
 
 >stack.h
 ```cpp
@@ -490,7 +490,7 @@ int main() {
 
 > Output
 > 
-> ![Screenshot Output Unguided 2](output/unguided3.png)
+> ![Screenshot Output Unguided 3](output/unguided3.png)
 
 ## Referensi
 > 
