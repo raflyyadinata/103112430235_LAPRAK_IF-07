@@ -5,6 +5,9 @@
 
 Stack adalah struktur data yang memungkinkan ketika data terakhir masuk maka data pertama keluar atau disebut pop dan push
 
+pop = menghaps dan mengambil elemen di bagian stack
+push = menambahkan elemen ke atas stack
+
 ## Guided
 
 ### Soal 1
@@ -88,7 +91,7 @@ int main()
 ```
 
 > Output
-> 
+> stack dinamis
 > ![Screenshot Output Guided 1](output/guided1.png)
 
 
@@ -220,7 +223,7 @@ int main() {
 ```
 
 > Output
-> 
+> memindahkan elemen menggunakan strukdat yang sama
 > ![Screenshot Output Unguided 1](output/unguided1.png)
 
 ---
@@ -361,7 +364,7 @@ int main() {
 
 
 > Output
-> 
+> menggunakan pushAscending untuk menjaga stack tetap dalam urutan keatas
 > ![Screenshot Output Unguided 2](output/unguided2.png)
 
 
@@ -489,10 +492,18 @@ int main() {
 ```
 
 > Output
-> 
+> fungsi getInputStream untuk membaca inputan (hanya angka) lalu stack ditampilkan dan dibalik
 > ![Screenshot Output Unguided 3](output/unguided3.png)
 
 ## Referensi
-> 
+> A. Drozdek, Data Structures and Algorithms in C++, 4th Edition. Cengage Learning, 2013.
+
+>Y. Langsam, M. J. Augenstein, A. M. Tenenbaum, Data Structures Using C and C++, Prentice Hall, 1996.
+
+>S. Malik, C++ Programming: From Problem Analysis to Program Design, 8th Edition. Cengage Learning, 2017.
+
+>Documentation of C++ (cplusplus.com) – Stack Data Structure: https://www.cplusplus.com
+
+>GeeksforGeeks – Stack Data Structure: https://www.geeksforgeeks.org/stack-data-structure/
 
 
