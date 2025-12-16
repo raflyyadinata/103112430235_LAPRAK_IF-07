@@ -145,7 +145,7 @@ int main()
 > Output
 > menggunakan struktur data Queue yang disimpan dalam array berukuran tetap (maksimal 5 data). data yang masuk lebih dulu akan keluar lebih dulu, seperti orang mengantre.
 Pada program utama, semua fungsi tersebut dicoba satu per satu, sehingga terlihat jelas cara menambah, menghapus, dan menampilkan data dalam antrian. ini disebut juga FIFO atau first in first out
-> ![Screenshot Output Guided 1](output/guided11.png)
+> ![Screenshot Output Guided 1](output/guided1.png)
 
 
 
