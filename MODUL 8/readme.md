@@ -145,7 +145,7 @@ int main()
 > Output
 > menggunakan struktur data Queue yang disimpan dalam array berukuran tetap (maksimal 5 data). data yang masuk lebih dulu akan keluar lebih dulu, seperti orang mengantre.
 Pada program utama, semua fungsi tersebut dicoba satu per satu, sehingga terlihat jelas cara menambah, menghapus, dan menampilkan data dalam antrian. ini disebut juga FIFO atau first in first out
-> ![Screenshot Output Guided 1](output/guided1.png)
+> ![Screenshot Output Guided 1](output./guided1.png)
 
 
 
@@ -291,7 +291,7 @@ int main()
 > Output
 > posisi head selalu berada di indeks 0, sedangkan tail bergerak mengikuti jumlah data yang ada.
 Setiap kali terjadi operasi dequeue, elemen paling depan dihapus, lalu seluruh data setelahnya digeser satu posisi ke depan agar head tetap berada di posisi awal.
-> ![Screenshot Output Unguided 1](output/unguided1.png)
+> ![Screenshot Output Unguided 1](output./unguided1.png)
 
 ---
 
@@ -417,7 +417,7 @@ int main() {
 > Output
 > head dan tail sama-sama dapat bergerak.
 Ketika elemen dihapus (dequeue), head berpindah ke indeks berikutnya tanpa menggeser data. Namun, jika tail sudah mencapai indeks terakhir array dan masih ada ruang kosong di depan (karena dequeue sebelumnya), maka dilakukan pergeseran data ke depan agar queue tetap bisa menampung elemen baru.
-> ![Screenshot Output Unguided 2](output/unguided2.png)
+> ![Screenshot Output Unguided 2](output./unguided2.png)
 
 
 ---
@@ -565,7 +565,7 @@ int main()
 
 > Output
 > Array dianggap seperti lingkaran, sehingga ketika tail mencapai indeks terakhir, ia dapat kembali ke indeks awal jika masih tersedia ruang. Hal ini dicapai dengan operasi modulus (%).
-> ![Screenshot Output Unguided 2](output/unguided3.png)
+> ![Screenshot Output Unguided 2](output./unguided3.png)
 
 ## Referensi
 > https://www.geeksforgeeks.org/dsa/queue-data-structure/
