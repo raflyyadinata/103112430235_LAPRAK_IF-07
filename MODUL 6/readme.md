@@ -524,8 +524,7 @@ int main() {
  ⁠
 Output
 	 ![Screenshot Output](output/unguided1.png)
-     >
-	 >
+	 
 
 ---
 
