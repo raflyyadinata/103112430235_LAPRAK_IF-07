@@ -13,7 +13,7 @@ node paling atas disebut root, node dibawahnya disebut child dan node yang tidak
 ### Soal 1
 
 > 
-```
+```cpp
 #include <iostream>
 using namespace std;
 
