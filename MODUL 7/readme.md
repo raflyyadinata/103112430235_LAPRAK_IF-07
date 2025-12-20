@@ -496,9 +496,9 @@ https://cplusplus.com/reference/stack/stack/?utm_source=chatgpt.com
 > ![Screenshot Output Unguided 3](output/unguided3.png)
 
 ## Referensi
-> https://www.w3schools.com/cpp/cpp_stacks.asp?utm_source=chatgpt.com
+> https://www.w3schools.com/cpp/cpp_stacks.asp
 
-> https://cplusplus.com/reference/stack/stack/?utm_source=chatgpt.com
+> https://cplusplus.com/reference/stack/stack/
 
 > https://www.geeksforgeeks.org/stack-data-structure/
 
