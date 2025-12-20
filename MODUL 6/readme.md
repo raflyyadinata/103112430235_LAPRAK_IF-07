@@ -3,7 +3,7 @@
 
 ## Dasar Teori
 
-Doubly linked list adalah struktur data yang lebih kompleks dibandingkan dengan singly linked list, tetapi memiliki beberapa keunggulan. Keunggulan utamanya adalah memungkinkan penelusuran data secara efisien ke dua arah. Hal ini karena setiap node dalam daftar memiliki pointer ke node sebelumnya dan pointer ke node berikutnya. Dengan begitu, proses penyisipan dan penghapusan node dapat dilakukan dengan cepat dan mudah, serta penelusuran data bisa dilakukan dari kedua arah.
+Doubly Linked List adalah struktur data dari rangkaian elemen node yang saling terhubung lewat dua pointer. next elemen selanjutnya dan prev  sebelumnya,  Struktur ini mempunyai dua penunjuk, yaitu first yang menunjuk ke elemen pertama dan last yang menunjuk ke elemen terakhir. Dengan adanya dua arah hubungan antar node, operasi seperti penyisipan, penghapusan, pencarian, dan pembaruan data bisa dilakukan lebih fleksibel dibandingkan dengan Singly Linked List, meskipun membutuhkan memori lebih besar karena setiap node menyimpan dua pointer.
 
 ## Guided
 
@@ -318,67 +318,13 @@ Kode tersebut merupakan program Doubly Linked List dalam bahasa C++ yang berfung
 ### Soal 1
 
 Buatlah implementasi ADT Doubly Linked list pada file “Doublylist.cpp” dan coba hasil implementasi ADT pada file “main.cpp”.
-
+> doublylist.cpp
 ```cpp
-#ifndef DOUBLYLIST_H
-#define DOUBLYLIST_H
+#include "Doublylist.h"
 
-#include <iostream>
-#include <string>
-using namespace std;
-
-struct Kendaraan {
-    string nopol;
-    string warna;
-    int thnBuat;
-};
-
-typedef Kendaraan infotype;
-
-struct ElmList {
-    infotype info;
-    ElmList* next;
-    ElmList* prev;
-};
-
-typedef ElmList* address;
-
-struct List {
-    address First;
-    address Last;
-};
-
-void CreateList(List &L);
-address alokasi(infotype x);
-void dealokasi(address &P);
-void printInfo(List L);
-void insertLast(List &L, address P);
-address findElm(List L, string nopol);
-void deleteFirst(List &L, address &P);
-void deleteLast(List &L, address &P);
-void deleteAfter(address Prec, address &P);
-
-#endif
-
-```
- ⁠
-Output
-	 ![Screenshot Output](output/unguided1.png)
-
-Kode tersebut adalah header file untuk program Doubly Linked List yang menyimpan data kendaraan. Di dalamnya terdapat struktur node dengan pointer ke elemen sebelum dan sesudahnya, serta deklarasi fungsi untuk membuat, menambah, mencari, menampilkan, dan menghapus data pada list.
-
----
-
-### Soal 2
-
-Carilah elemen dengan nomor polisi D001 dengan membuat fungsi baru.
-
-```cpp
-#include "doublylist.h"
-
-void CreateList(List &L) {
-    L.First = NULL;
-    L.Last = NULL;
+void createList(List &L) {
+    L.first = NULL;
+    L.last = NULL;
 }
 
 address alokasi(infotype x) {
@@ -394,30 +340,35 @@ void dealokasi(address &P) {
     P = NULL;
 }
 
-void printInfo(List L) {
-    address P = L.First;
-    while (P != NULL) {
-        cout << "Nomor Polisi : " << P->info.nopol << endl;
-        cout << "Warna        : " << P->info.warna << endl;
-        cout << "Tahun        : " << P->info.thnBuat << endl;
-        cout << "------------------------------" << endl;
-        P = P->next;
+void insertLast(List &L, address P) {
+    if (L.first == NULL) {
+        L.first = P;
+        L.last = P;
+    } else {
+        L.last->next = P;
+        P->prev = L.last;
+        L.last = P;
     }
 }
 
-void insertLast(List &L, address P) {
-    if (L.First == NULL) {
-        L.First = P;
-        L.Last = P;
-    } else {
-        L.Last->next = P;
-        P->prev = L.Last;
-        L.Last = P;
+void printInfo(List L) {
+    address P = L.first;
+    if (P == NULL) {
+        cout << "List kosong." << endl;
+        return;
     }
+    cout << "Data kendaraan dalam list:" << endl;
+    while (P != NULL) {
+        cout << "Nopol : " << P->info.nopol
+             << ", Warna : " << P->info.warna
+             << ", Tahun : " << P->info.thnBuat << endl;
+        P = P->next;
+    }
+    cout << endl;
 }
 
 address findElm(List L, string nopol) {
-    address P = L.First;
+    address P = L.first;
     while (P != NULL) {
         if (P->info.nopol == nopol) {
             return P;
@@ -428,30 +379,30 @@ address findElm(List L, string nopol) {
 }
 
 void deleteFirst(List &L, address &P) {
-    if (L.First != NULL) {
-        P = L.First;
-        if (L.First == L.Last) {
-            L.First = NULL;
-            L.Last = NULL;
+    if (L.first != NULL) {
+        P = L.first;
+        if (L.first == L.last) {
+            L.first = NULL;
+            L.last = NULL;
         } else {
-            L.First = L.First->next;
-            L.First->prev = NULL;
+            L.first = L.first->next;
+            L.first->prev = NULL;
+            P->next = NULL;
         }
-        P->next = NULL;
     }
 }
 
 void deleteLast(List &L, address &P) {
-    if (L.First != NULL) {
-        P = L.Last;
-        if (L.First == L.Last) {
-            L.First = NULL;
-            L.Last = NULL;
+    if (L.last != NULL) {
+        P = L.last;
+        if (L.first == L.last) {
+            L.first = NULL;
+            L.last = NULL;
         } else {
-            L.Last = L.Last->prev;
-            L.Last->next = NULL;
+            L.last = L.last->prev;
+            L.last->next = NULL;
+            P->prev = NULL;
         }
-        P->prev = NULL;
     }
 }
 
@@ -466,98 +417,118 @@ void deleteAfter(address Prec, address &P) {
         P->prev = NULL;
     }
 }
-
 ```
-
-Output 
-	⁠ ![Screenshot Output](output/unguided2.png)
-
-Kode ini berisi fungsi untuk membuat, menambah, menampilkan, mencari, dan menghapus data pada doubly linked list yang berisi informasi kendaraan. Setiap node terhubung dua arah sehingga data bisa diakses dan dihapus dari depan maupun belakang dengan mudah.
-
----
-
-### Soal 3
-
-Hapus elemen dengan nomor polisi D003 dengan procedure delete.
-•⁠  ⁠procedure deleteFirst( input/output L : List,
- P : address )
-•⁠  ⁠procedure deleteLast( input/output L : List,
- P : address )
-•⁠  ⁠procedure deleteAfter( input Prec : address,
- input/output P : address )
-
+> doublylist.h
 ```cpp
-#include "DoublyList.h"
+#ifndef DOUBLYLIST_H
+#define DOUBLYLIST_H
+
+#include <iostream>
+#include <string>
+using namespace std;
+
+struct kendaraan {
+    string nopol;
+    string warna;
+    int thnBuat;
+};
+
+typedef kendaraan infotype;
+
+struct ElmList {
+    infotype info;
+    ElmList *next;
+    ElmList *prev;
+};
+
+typedef ElmList* address;
+
+struct List {
+    address first;
+    address last;
+};
+
+void createList(List &L);
+address alokasi(infotype x);
+void dealokasi(address &P);
+void insertLast(List &L, address P);
+void printInfo(List L);
+address findElm(List L, string nopol);
+void deleteFirst(List &L, address &P);
+void deleteLast(List &L, address &P);
+void deleteAfter(address Prec, address &P);
+
+#endif
+```
+> main.cpp
+```cpp
+#include "Doublylist.h"
 
 int main() {
     List L;
-    CreateList(L);
+    createList(L);
 
-    int n;
-    cout << "Masukkan jumlah kendaraan: ";
-    cin >> n;
-    cin.ignore();
+    kendaraan k1 = {"D001", "Merah", 2020};
+    kendaraan k2 = {"D002", "Hitam", 2018};
+    kendaraan k3 = {"D003", "Putih", 2022};
+    kendaraan k4 = {"D004", "Biru", 2021};
 
-    for (int i = 0; i < n; i++) {
-        infotype x;
-        cout << "Masukkan nomor polisi: ";
-        getline(cin, x.nopol);
-        cout << "Masukkan warna kendaraan: ";
-        getline(cin, x.warna);
-        cout << "Masukkan tahun kendaraan: ";
-        cin >> x.thnBuat;
-        cin.ignore();
-        insertLast(L, alokasi(x));
-        cout << endl;
-    }
+    insertLast(L, alokasi(k1));
+    insertLast(L, alokasi(k2));
+    insertLast(L, alokasi(k3));
+    insertLast(L, alokasi(k4));
 
-    cout << "\nDATA LIST 1\n";
+    cout << "=== DATA AWAL ===" << endl;
     printInfo(L);
 
-    string cari;
-    cout << "Masukkan Nomor Polisi yang dicari: ";
-    getline(cin, cari);
-    address found = findElm(L, cari);
-    if (found != nullptr) {
-        cout << "\nNomor Polisi : " << found->info.nopol << endl;
-        cout << "Warna        : " << found->info.warna << endl;
-        cout << "Tahun        : " << found->info.thnBuat << endl;
+    address found = findElm(L, "D001");
+    if (found != NULL) {
+        cout << "Data ditemukan: "
+             << found->info.nopol << ", "
+             << found->info.warna << ", "
+             << found->info.thnBuat << endl;
     } else {
-        cout << "\nData tidak ditemukan.\n";
+        cout << "Data tidak ditemukan!" << endl;
     }
 
-    cout << "\nMasukkan Nomor Polisi yang akan dihapus: ";
-    string hapus;
-    getline(cin, hapus);
+    cout << endl;
 
-    address del = findElm(L, hapus);
-    if (del != nullptr) {
-        address P;
-        if (del == L.First) {
-            deleteFirst(L, P);
-        } else if (del == L.Last) {
-            deleteLast(L, P);
-        } else {
-            deleteAfter(del->prev, P);
+    address del;
+    deleteFirst(L, del);
+    dealokasi(del);
+
+    cout << "=== DATA SETELAH HAPUS FIRST ===" << endl;
+    printInfo(L);
+
+    address prec = findElm(L, "D002");
+    if (prec != NULL) {
+        deleteAfter(prec, del);
+        if (del != NULL) {
+            cout << "Menghapus data setelah D002 yaitu: " 
+                 << del->info.nopol << endl;
+            dealokasi(del);
         }
-        cout << "Data dengan nomor polisi " << hapus << " berhasil dihapus.\n";
-        dealokasi(P);
-    } else {
-        cout << "Data tidak ditemukan.\n";
     }
 
-    cout << "\nDATA LIST 1 SETELAH HAPUS:\n";
+    cout << "=== DATA SETELAH DELETE AFTER D002 ===" << endl;
+    printInfo(L);
+
+    dealokasi(del);
+
+    cout << "=== DATA SETELAH HAPUS LAST ===" << endl;
     printInfo(L);
 
     return 0;
 }
-
 ```
- 
-Output 
-	⁠ ![Screenshot Output](output/unguided3.png)
+ ⁠
+Output
+	 ![Screenshot Output](output/unguided1.png)
+     >
+	 >
 
-Kode tersebut berfungsi untuk mengelola data kendaraan menggunakan doubly linked list. Program meminta pengguna memasukkan beberapa data kendaraan, lalu menampilkannya. Setelah itu, pengguna dapat mencari data berdasarkan nomor polisi dan menghapus data tersebut baik di awal, tengah, maupun akhir list.
+---
+
 
 ## Referensi
 
