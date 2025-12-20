@@ -204,7 +204,7 @@ int main()
 ```
 
 > Output
-> 
+> insert untuk menambahkan data, search untuk mencari data, delete untuk menghapus data, serta update untuk memperbarui nilai node. Selain itu, digunakan tiga metode traversal, yaitu PreOrder, InOrder, dan PostOrder, untuk menampilkan isi tree dengan urutan yang berbeda. Hasil output menunjukkan bahwa seluruh operasi berjalan sesuai dengan konsep Binary Search Tree.
 > ![Screenshot Output Guided 1](output/guided1.png)
 
 
@@ -306,7 +306,7 @@ int main() {
 ```
 
 > Output
-> 
+> menggunakan fungsi insertnode sesuai aturan BST, data yang lebih kecil disimpan di subtree kiri dan data yang lebih besar di subtree kanan. Traversal inorder digunakan untuk menampilkan isi tree dan menghasilkan data yang terurut dari nilai terkecil ke terbesar.
 > ![Screenshot Output Unguided 1](output/unguided1.png)
 
 ---
@@ -437,7 +437,7 @@ int main() {
 ```
 
 > Output
-> 
+> Fungsi hitungjumlahnode digunakan untuk menghitung jumlah seluruh node yang ada di dalam tree, fungsi hitungtotalinfo digunakan untuk menjumlahkan seluruh nilai data yang tersimpan, dan fungsi hitungkedalaman digunakan untuk menghitung kedalaman maksimum tree.
 > ![Screenshot Output Unguided 2](output/unguided2.png)
 
 
@@ -594,9 +594,10 @@ int main() {
 ```
 
 > Output
-> 
+> ditambahkan metode traversal preorder dan postorder. Traversal preorder menampilkan data dengan urutan root, anak kiri, lalu anak kanan, sedangkan traversal postorder menampilkan data dengan urutan anak kiri, anak kanan, kemudian root. Selain menampilkan traversal, program juga tetap menampilkan hasil perhitungan kedalaman tree, jumlah node, dan total nilai data. Dari keseluruhan hasil unguided dapat disimpulkan bahwa BST mampu mengelola data secara hierarkis dengan baik dan membantu memahami konsep rekursif serta traversal pada struktur data tree.
 > ![Screenshot Output Unguided 2](output/unguided3.png)
 
 ## Referensi
-> 
+> Modul Praktikum Struktur Data, Materi Tree dan Binary Search Tree, Program Studi Teknik Informatika.
+> https://www.mahirkoding.com/struktur-data-binary-search-tree-bst
 
