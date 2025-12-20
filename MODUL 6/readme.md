@@ -1,4 +1,4 @@
-# <h1 align="center">Laporan Praktikum Struktur Data<br> Modul 6 double linked list bag 1 </h1>
+# <h1 align="center">Laporan Praktikum Struktur Data<br> Modul 6 double linked list</h1>
 <p align="center">Rafly Adinata Prayoga / 103112430235</p>
 
 ## Dasar Teori
