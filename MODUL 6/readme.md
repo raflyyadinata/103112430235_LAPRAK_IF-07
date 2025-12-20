@@ -309,7 +309,7 @@ int main() {
 Output
  ![Screenshot Output](output/guided1.png)
 
-Kode tersebut merupakan program Doubly Linked List dalam bahasa C++ yang berfungsi untuk mengelola data secara dua arah (maju dan mundur). Program ini memungkinkan pengguna menambah, menghapus, memperbarui, dan menampilkan data melalui menu interaktif. Setiap node memiliki pointer ke node sebelumnya dan berikutnya, sehingga data dapat diakses dari kedua arah dengan mudah. Tujuannya adalah untuk mempermudah pengelolaan data secara dinamis menggunakan struktur list dua arah.
+Setiap node memiliki dua pointer, yaitu prev dan next, yang memungkinkan akses data dari dua arah. Program menyediakan menu interaktif untuk melakukan operasi insert, delete, update, dan tampil data. Data dapat ditambahkan di depan, belakang, atau setelah data tertentu, serta dihapus dari berbagai posisi. Hasil output menunjukkan bahwa pengelolaan data berjalan dengan baik menggunakan konsep doubly linked list.
 
 ---
 
@@ -525,7 +525,7 @@ int main() {
 Output
 	 ![Screenshot Output](output/unguided1.png)
 	 
-
+Doubly Linked List diimplementasikan dalam bentuk ADT yang dipisahkan ke dalam file header, implementasi, dan main. Setiap node menyimpan data kendaraan dan memiliki pointer next dan prev. Program menyediakan fungsi untuk menambah data, menampilkan data, mencari data, serta menghapus node di posisi tertentu.
 ---
 
 
