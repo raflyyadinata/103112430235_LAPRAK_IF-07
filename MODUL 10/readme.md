@@ -11,7 +11,7 @@ node paling atas disebut root, node dibawahnya disebut child dan node yang tidak
 ## Guided
 
 ### Soal 1
-
+### 
 > 
 ```cpp
 #include <iostream>
@@ -211,8 +211,7 @@ int main()
 
 ## Unguided
 
-### Soal 1
-
+### Soal 1 Buatlah ADT Binary Search Tree menggunakan Linked list sebagai berikut di dalam file “bstree.h”, Buatlah implementasi ADT Binary Search Tree pada file “bstree.cpp” dan cobalah hasil implementasi ADT pada file “main.cpp”
 
 
 >bstree.cpp
@@ -314,7 +313,7 @@ int main() {
 
 ### Soal 2
 
-2. 
+2. Buatlah fungsi untuk menghitung jumlah node dengan fungsi berikut. ➢ fungsi hitungJumlahNode( root:address ) : integer /* fungsi mengembalikan integer banyak node yang ada di dalam BST*/ ➢ fungsi hitungTotalInfo( root:address, start:integer ) : integer /* fungsi mengembalikan jumlah (total) info dari node-node yang ada di dalam BST*/ ➢ fungsi hitungKedalaman( root:address, start:integer ) : integer /* fungsi rekursif mengembalikan integer kedalaman maksimal dari binary tree */
 
 >bstree.cpp
 ```cpp
@@ -446,7 +445,7 @@ int main() {
 
 ### Soal 3
 
-3. 
+3. Print tree secara pre-order dan post-order.
 
 >bstree.cpp
 ```cpp
