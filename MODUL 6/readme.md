@@ -307,7 +307,7 @@ int main() {
 ```
  
 Output
-⁠![Output guided](https://github.com/chafdv/Modul-6/blob/main/Output/guided6.png)
+ ![Screenshot Output](output/guided1.png)
 
 Kode tersebut merupakan program Doubly Linked List dalam bahasa C++ yang berfungsi untuk mengelola data secara dua arah (maju dan mundur). Program ini memungkinkan pengguna menambah, menghapus, memperbarui, dan menampilkan data melalui menu interaktif. Setiap node memiliki pointer ke node sebelumnya dan berikutnya, sehingga data dapat diakses dari kedua arah dengan mudah. Tujuannya adalah untuk mempermudah pengelolaan data secara dinamis menggunakan struktur list dua arah.
 
@@ -363,7 +363,7 @@ void deleteAfter(address Prec, address &P);
 ```
  ⁠
 Output
-	⁠![Output Soal 1](https://github.com/chafdv/Modul-6/blob/main/Output/maincpp1.png)
+	 ![Screenshot Output](output/unguided1.png)
 
 Kode tersebut adalah header file untuk program Doubly Linked List yang menyimpan data kendaraan. Di dalamnya terdapat struktur node dengan pointer ke elemen sebelum dan sesudahnya, serta deklarasi fungsi untuk membuat, menambah, mencari, menampilkan, dan menghapus data pada list.
 
@@ -470,7 +470,7 @@ void deleteAfter(address Prec, address &P) {
 ```
 
 Output 
-	⁠![Output Soal 2](https://github.com/chafdv/Modul-6/blob/main/Output/maincpp2.png)
+	⁠ ![Screenshot Output](output/unguided2.png)
 
 Kode ini berisi fungsi untuk membuat, menambah, menampilkan, mencari, dan menghapus data pada doubly linked list yang berisi informasi kendaraan. Setiap node terhubung dua arah sehingga data bisa diakses dan dihapus dari depan maupun belakang dengan mudah.
 
@@ -555,7 +555,7 @@ int main() {
 ```
  
 Output 
-	⁠![Output Soal 3](https://github.com/chafdv/Modul-6/blob/main/Output/maincpp3.png)
+	⁠ ![Screenshot Output](output/unguided3.png)
 
 Kode tersebut berfungsi untuk mengelola data kendaraan menggunakan doubly linked list. Program meminta pengguna memasukkan beberapa data kendaraan, lalu menampilkannya. Setelah itu, pengguna dapat mencari data berdasarkan nomor polisi dan menghapus data tersebut baik di awal, tengah, maupun akhir list.
 
