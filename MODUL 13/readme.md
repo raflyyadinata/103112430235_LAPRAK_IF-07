@@ -2,9 +2,9 @@
 <p align="center">RAFLY ADINATA PRAYOGA - 103112430235</p>
 
 ## Dasar Teori
-Multi linked list adalah linked list dengan lebih dari satu pointer per node yang digunakan untuk mengelola relasi antar data. Sangat cocok untuk sistem many-to-many.
----
 
+---
+Multi linked list adalah linked list dengan lebih dari satu pointer per node yang digunakan untuk mengelola relasi antar data. Sangat cocok untuk sistem many-to-many.
 
 ## Guided
 
