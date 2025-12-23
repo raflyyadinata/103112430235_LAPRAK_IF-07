@@ -318,7 +318,7 @@ void printInfo(List L){
     } while(P != L.First);
 }
 ```
-main.cpp
+>main.cpp
 ```cpp
     #include <iostream>
 #include "circularlist.h"
