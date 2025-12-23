@@ -388,5 +388,5 @@ int main()
 
 
 ## Referensi
-> 
+> https://www.mahirkoding.com/struktur-data-multi-linked-list-adt
 
